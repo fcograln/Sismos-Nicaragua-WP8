@@ -1,0 +1,16 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SismoNica_WP8._0.View.SplashPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+
+    <phone:PhoneApplicationPage.Style>
+        <StaticResource ResourceKey="OutTransitionPage"/>
+    </phone:PhoneApplicationPage.Style>
+
+    <Grid Background="#FFD24726">
+        <Image Style="{StaticResource SplashImageIcon}" />
+        <TextBlock Style="{StaticResource SplashLoadingTextBlock}" />
+        <ProgressBar Style="{StaticResource SplashLoadingProgressBar}" />
+    </Grid>
+</phone:PhoneApplicationPage>

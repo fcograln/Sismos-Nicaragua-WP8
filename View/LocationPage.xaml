@@ -1,0 +1,44 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    x:Class="SismoNica_WP8._0.View.LocationPage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+     shell:SystemTray.IsVisible="True"
+    shell:SystemTray.ForegroundColor="White"
+    shell:SystemTray.Opacity="0" Style="{StaticResource InOutTransitionPage}">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Image Source="/Assets/InAppAssets/fill3.png" />
+            <TextBlock Text="Sismos&#xA;Nicaragua" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <maps:Map x:Name="map" Center="12.507640,-86.898377" ZoomLevel="5"  Grid.Row="0"/>
+
+            <Border BorderThickness="5" Background="#FFD24726" Opacity="0.85" BorderBrush="#FFD24726" Grid.Row="1" >
+                <TextBlock Grid.Row="0" Foreground="White" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" Text="{Binding  Mapdescription }" />
+            </Border>
+
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
